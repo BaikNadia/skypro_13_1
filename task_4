@@ -1,0 +1,9 @@
+# выбрать из датафрейма только те строки, где значение в столбце country равно Italy
+
+import pandas as pd
+
+df = pd.read_excel('file-name.xlsx')
+
+italy_wine = df.loc[df.country == 'Italy']
+
+print(italy_wine.head())  # для проверки отработанного выше кода
