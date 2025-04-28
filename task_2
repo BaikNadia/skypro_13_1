@@ -1,0 +1,8 @@
+# считать данные из excel-файла и получить их как DataFrame
+
+import pandas as pd
+
+df = pd.read_excel('file-name.xlsx')
+
+print(df.shape) # общее число строк
+print(df.head()) # так называемую голову(шапку) файла, первые пять строк
