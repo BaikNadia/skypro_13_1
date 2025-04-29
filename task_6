@@ -1,0 +1,24 @@
+# напишите свою функцию, которая вычисляет среднее значение оценок из столбца 'points', примените ее к DataFrame
+
+# Метод apply в библиотеке pandas — позволяет применять пользовательские функции к каждой строке или столбцу DataFrame
+
+import pandas as pd
+
+df = pd.read_excel('file-name.xlsx')  # pd.read_csv('file-name.csv')
+
+def calc_avg(points):
+    return sum(points) / len(points)
+
+print(df['points'].apply(lambda x: calc_avg([x])))
+
+# узнать среднюю цену вина для каждой страны
+
+# Метод groupby() — позволяет сгруппировать данные по одному или нескольким столбцам или по результатам какой-либо функции.
+
+import pandas as pd
+
+df = pd.read_excel('file-name.xlsx')  # pd.read_csv('file-name.csv')
+
+country_df = df.groupby('country')
+
+print(country_df.price.mean())
