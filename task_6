@@ -21,4 +21,7 @@ df = pd.read_excel('file-name.xlsx')  # pd.read_csv('file-name.csv')
 
 country_df = df.groupby('country')
 
+# Метод mean() вычисляет среднее значение для всех числовых столбцов в каждой группе. Результат — новый DataFrame, 
+# где индексом являются уникальные значения из column_name, а значениями — средние значения для каждой группы.
+
 print(country_df.price.mean())
