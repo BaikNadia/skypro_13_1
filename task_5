@@ -1,0 +1,8 @@
+# создать новый столбец в датафрейме, содержащий длину текста с описанием вина
+import pandas as pd
+
+df = pd.read_excel('file-name.xlsx')  #
+
+df['description_length'] = df.description.map(len)  # средние значения для поля 'description_length'
+
+print(df.description_length.describe())   
